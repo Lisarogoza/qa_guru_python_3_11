@@ -8,8 +8,8 @@ def browser_settings_skip(request):
         browser.config.window_width = 1366
         browser.config.window_height = 768
     elif request.param == 'mobile':
-        browser.config.window_width = 375
-        browser.config.window_height = 812
+        browser.config.window_width = 393
+        browser.config.window_height = 851
     browser.open('https://github.com')
     return request.param
 
@@ -20,8 +20,8 @@ def browser_settings(request):
         browser.config.window_width = 1366
         browser.config.window_height = 768
     elif request.param == 'mobile':
-        browser.config.window_width = 375
-        browser.config.window_height = 812
+        browser.config.window_width = 393
+        browser.config.window_height = 851
     browser.open('https://github.com')
 
 
@@ -36,8 +36,8 @@ def browser_settings_desktop():
 
 @pytest.fixture
 def browser_settings_mobile():
-    browser.config.window_width = 375
-    browser.config.window_height = 812
+    browser.config.window_width = 393
+    browser.config.window_height = 851
     browser.open('https://github.com')
     yield
     browser.quit()
